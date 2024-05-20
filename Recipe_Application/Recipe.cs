@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Recipe_Application
 {
-    internal class Recipe : IComparable<Recipe>
+    public class Recipe : IComparable<Recipe>
     {
         private string name = "";
         private double quantityFactorValue = 1;
-        private List<Ingredient> ingredients = [];
+        public List<Ingredient> ingredients = [];
         private List<Step> steps = [];
 
 
@@ -43,7 +43,7 @@ namespace Recipe_Application
         }
 
         //gets steps
-        public List<Step> Steps 
+        internal List<Step> Steps 
         { 
             get => steps;
             set => steps = value;
@@ -79,7 +79,7 @@ namespace Recipe_Application
             int totalCalories = 0;
             for (int i = 0; i < ingredients.Count; i++)
             {
-                totalCalories += ingredients[i].Calories;
+               totalCalories += Math.Abs(ingredients[i].Calories);
             }
             return totalCalories;
         }

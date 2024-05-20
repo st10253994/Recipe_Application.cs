@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Recipe_Application
 {
-    internal class Ingredient
+    public class Ingredient
     {
         private string name = "";
         private double quantity = 0;

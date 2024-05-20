@@ -86,10 +86,7 @@ namespace Recipe_Application
         {
             int calorieTotal = 0;
             Recipe recipe = findRecipeByIndex(index);
-            for (int i = 0;i < recipe.Ingredients.Count; i++)
-            {
-                calorieTotal += recipe.Ingredients[i].Calories;
-            }
+            calorieTotal = recipe.totalCalorieCount();
             return calorieTotal;
         }
     }
