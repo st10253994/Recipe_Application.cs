@@ -67,7 +67,7 @@ namespace Recipe_Application
             quantityFactorValue = 1;
         }
 
-
+        //overrides default sort method
         public int CompareTo(Recipe recipe)
         {
             return this.name.CompareTo(recipe.name);
@@ -79,7 +79,7 @@ namespace Recipe_Application
             int totalCalories = 0;
             for (int i = 0; i < ingredients.Count; i++)
             {
-               totalCalories += Math.Abs(ingredients[i].Calories);
+               totalCalories += Convert.ToInt32(Math.Abs(ingredients[i].Calories) * QuantityFactorValue);
             }
             return totalCalories;
         }

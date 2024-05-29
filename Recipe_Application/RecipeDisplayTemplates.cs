@@ -25,7 +25,7 @@ namespace Recipe_Application
                 Console.WriteLine((i + 1) +
                     ".  " + ingredients[i].Name +
                     " " + (ingredients[i].Quantity * recipe.QuantityFactorValue) +
-                    " " + ingredients[i].UnitOfMeasure + "\n[" + (ingredients[i].Calories * recipe.QuantityFactorValue) + " " + RecipeConstants.CALORIE_UNIT + " " +
+                    " " + ingredients[i].UnitOfMeasure + "\n[" + (Math.Abs(ingredients[i].Calories) * recipe.QuantityFactorValue) + " " + RecipeConstants.CALORIE_UNIT + " " +
                     ingredients[i].FoodGroup + "]");
             }
             printLineSeperator();

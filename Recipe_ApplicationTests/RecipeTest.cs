@@ -15,10 +15,6 @@ namespace Recipe_ApplicationTests
             recipe.Name = "Test";
             List<Ingredient> ingredients = new List<Ingredient>();
             ingredients.Add(new Ingredient());
-            //ingredients[0].Name = "milk";
-            //ingredients[0].Quantity = 200;
-            //ingredients[0].UnitOfMeasure = "ml";
-            //ingredients[0].FoodGroup = "Dairy";
             ingredients[0].Calories = 300;
 
             recipe.Ingredients = ingredients;

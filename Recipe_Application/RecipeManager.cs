@@ -75,7 +75,7 @@ namespace Recipe_Application
         }
 
         //Deletes a recipes at a given index
-        public void clearRecipeSelectionByIndex(int index)
+        public void removeRecipeSelectionByIndex(int index)
         {
             Recipe recipe = findRecipeByIndex(index);
             recipes.Remove(recipe);
